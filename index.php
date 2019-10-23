@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-	  <title>everywoman</title>
+	  <title>Every Woman</title>
 	 <link rel="stylesheet" type="text/css" href="everywoman.css">
 	 <meta charset="utf-8">
  </head>
