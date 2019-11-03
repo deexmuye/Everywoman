@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html>
- <head>
-	  <title>Every Woman</title>
-	 <link rel="stylesheet" type="text/css" href="everywoman.css">
-	 <meta charset="utf-8">
- </head>
- <body class="index">
- 
- 	   	 <div id="outer-wrapper" class="index home">
-	 	      <!-- begining of header wrapper-->
-	         <div id="header-wrapper">
-			     <div id="inner header">
-			         <h2 class="header-title">EVERYWOMAN</h2>
-			         <div id="description wrapper">
-			          	 <span>she is beautifull she is passionate</span>
-			         </div>
+<head>
+	<title>ev.php</title>
+	<link rel="stylesheet" type="text/css" href="ev.css">
+</head>
+<body>
+      <main>
+      	 <header>
+      	      <div id="header-wrapper">
+				 <div id="inner header">
+			           <h2 class="header-title">EVERYWOMAN</h2>
+			           <div id="description wrapper">
+			          	    <span>she is beautifull she is passionate</span>
+			           </div>
 		          </div>
-	           </div>
-	         <div class="navbar-wrapper">
-	             <div class="dropdown">
-	             	<button class="dropbtn">food</button>
-	             	<div class="dropdown-content">
-	             	<a href="#" title="gossips">Gossips</a>
-	             	<a href="#" title="gossips">Gossips</a>	
-	             		
-	             	</div>
-	             </div>
+		     </div>
+		     <div class="navbar-wrapper">
+		     	<div class="dropdown">
+				<button class="dropbtn">food</button>
+				<div class="dropdown-content">
+					<a href="/">cooking tips</a>
+					<a href="/">recipes</a>
+					<a href="/">local dishes</a>
+				</div>
+			</div>
 	             <a href="/" title="gossips">Gossips</a>
 	             <a href="/" title="fashion">Fashion</a>
 	             <a href="/" title="entertaiment">Entertaiment</a>
@@ -35,12 +33,13 @@
 	             <a href="/" title="about">About</a>
 	             <a href="/" title="hausa">Hausa</a>
 	 	      </div>
-	            <!-- header wrapper ends here-->
-	           <div class="section-wrapper comload">
+		 </header>
+		 <section class="hero">
+				<div class="section-wrapper comload">
 	              <div id="categories">
 	        	      <div class="row"></div>
 	        	     <div class="widget-content">
-	        		     <li>
+	        	     	<li>
 	        			     <a><img src="img/food.jpg" width="200" height="200">
 	        			     </a>
 	        		      </li>
@@ -56,7 +55,10 @@
 	               </div>
 	           </div>
 	       </div>
-	       <div id="content-wrapper" class="row">
+			</section>
+			<div class="flex-container">
+			     <section class="content">
+					<div id="content-wrapper" class="row">
 	 	       <div class="post-section">
 	 	           <div class="first-post">
 	 	  	          <div class="post-entry">
@@ -135,14 +137,15 @@
 	 	  	           </div>
 	 	  	      </div>
 	 	      </div>
-	          <div class="side-bar">
-	      	     <div id="sidebar" class="sidebar-section">
-	      		      <h2 class="side-title">About Me</h2>
-	      		     <div id="abt-me">
+				    
+					</section>
+					<aside class="sidebar">
+						<h2 class="side-title">About Me</h2>
+	      		     <div class="abt-me">
 	      			      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	      			       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	      			       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	      			       <a href="#" style="text-decoration: underline;color:pink;">click here</a>
+	      			       <a href="#" style="text-decoration: underline;color:#000000;">click here</a>
 	      		      </div>
 	      		      <!-- begining of social handle sections -->
 	      		     <div id="social">
@@ -159,7 +162,7 @@
 		               <!-- begining popular sections -->
 		               <div id="popular-section">
 		          	       <h2 class="popular">Popular</h2>
-		          	      <div id="popular-post">
+		          	      <div class="popular-post">
 		          	          <ul>
 		          	 	         <a href="/" title="how to become a millionaire"><h2 class="ps">How to become a millionaire</h2></a>
 		          	          </ul>
@@ -192,9 +195,29 @@
 		              </div>
 		          </div>
 		      </div>
-		      <div id="footer">
-		      	<h2 class="the-footer">my footer</h2>
-		      </div>
-		   </div>
-   </body>
+					</aside>
+				</div>
+			<footer>
+				<div row>
+				<div class"frow">
+					<p style="text-align: center;">Home</p>
+				</div>
+				<div class"frow">
+					<p style="text-align: center;">Terms</p>
+				</div>
+				<div class"frow">
+					<p style="text-align: center;">Privacy</p>
+				</div>
+				<div class"frow">
+					<p style="text-align: center;">Disclaimer</p>
+				</div>
+			</div>
+			<div class="footer-divider"></div>
+		<div class="drow">
+			<span class="sf">Copyright &copy; everywoman Blog 2019-2020. All Rights Reserved</span>
+			<span style="color: white;">coded by Deexmuye + &hearts;</span>
+		</div>	
+			</footer>
+		</main>
+  </body>
 </html>

@@ -5,40 +5,45 @@
 	<link rel="stylesheet" type="text/css" href="everywoman.css">
 </head>
 <body>
-	<div id="post-container">
-		<div class="post-blog">
-			<h2 class="form-header">Creat a New BlogPost</h2>
-			<div class="post-title">
-			<form action="postform.php" method="post">
-				<h3 class="pt">Post Title</h3>
-				<input class="ptd" type="text" name="posttitle" placeholder="A nice title">
-			</form>	
-			</div>
-			<div class="post-title">
-			<form action="postform.php" method="post">
-				<h3 class="post-subtitle">Post SubTitle</h3>
-				<input class="ptd" type="text" name="post subtitle" placeholder="A nice subtitle">
-			</form>	
-			</div>
-			<div class="post-title">
-			<form action="postform.php" method="post">
-				<h3 class="author">Post Author</h3>
-				<input class="ptd"type="text" name="posttitle" placeholder="A nice title">
-			</form>	
-			</div>
-			<div class="post-body">
-			<form action="postform.php" method="post">
-				<h3 class="post-body">Post Body</h3>
-				<textarea class="ptd" type="text" name="postbody"></textarea>
-			</form>	
-			</div>
-			<div class="post-title">
-			<form action="postform.php" method="post">
-				<input type="submit" name="sub" value="submit" style="background-color: pink; font-family: kalam; font-weight: bolder;padding: 14px 24px; color: white; cursor: pointer;">
-			</form>	
-			</div>
-				
-		</div>
- </div>
+	<?php require 'navbar.html.php'; ?>
+	<form class="reg-form" method="post" action="postform.php">
+	<h1 style="color: #7d6634; padding: 20px; margin: 20px;">create a new blogpost</h41>	
+	<tr>
+		<td>
+			<h2 class="ptt">Post Title</h2>
+			<input type="text" class="input" name="name" placeholder="nice posttitle" required="required"><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="ptt">Post Subtitle</h2>
+			<input type="text" class="input" name="password" placeholder="nice subtitle" required="required">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="ptt">Post Author</h2>
+			<input type="text" name="post-author" class="input" required="required">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="ptt">Post Body</h2>
+			<textarea class="input"></textarea><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="submit" name="sub" value="submit post" class="sub">
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="submit" name="clear" value="clear form" class="sub">
+
+		</td>
+	</tr>
+</form>
 </body>
 </html>
