@@ -1,37 +1,40 @@
 <!DOCTYPE html>
+<?php 
+session_start();
+ ?>
 <html>
 <head>
 	<title>registration form</title>
-	<link rel="stylesheet" type="text/css" href="everywoman.css">
+	<link rel="stylesheet" type="text/css" href="ev.css">
 </head>
+
 <body>
-	<?php require 'navbar.html.php'; ?>
-	<main class="reg_container">
-		<div id="reg-wrapper">
-			<h2>register with us</h2>
-			<form action="reg.php" method="post" accept-charset="utf-8">
-				<div class="form-group">
-					<header class="p-head">
-                     <label for="title">name</label>
-                 </header>
-				     <input class="form" type="text" name="name" placeholder="enter full name" required="required"><br>
-				</div>
-				<div class="form-group">
-					<header class="p-head">
-					<label for="name">email</label>
-				</header>
-					<input class="form" type="text" name="email" placeholder="enter your email" required="required">
-				</div>
-				<div class="form-group">
-					<header class="p-head">
-					<label for="name">password</label>
-				</header>
+	
+		<?php require 'views/header.html.php'; ?>   
+  <form action="reg.php" method="post" accept-charset="utf-8" class="form-body">
+  	 <h1 class="header">Create Account</h1>
+       <div class="form-group">
+			
+                <label for="title" class="header">name</label>
+           
+			<input class="form" type="text" name="name" placeholder="enter full name" required="required"><br>
+	 </div>
+	 <div class="form-group">
+		 
+			 <label for="name"  class="header">email</label>
+		 
+		 <input class="form" type="email" name="email" placeholder="enter your email" required="required">
+	  </div>
+	 <div class="form-group">
+					
+					<label for="name"  class="header">password</label>
+				
 					<input class="form" type="password" name="password" placeholder="***********" required="required">
 				</div>
 				<div class="form-group">
-					<header class="p-head">
-					<label for="name">state</label>
-				</header>
+					
+					<label for="name"  class="header">state</label>
+				
 					<select name="state" class="form">
 						<option>select your state</option>
 						<option>adamawa</option>
@@ -45,44 +48,66 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<header class="p-head">
-					<label for="name">phone no</label>
-				</header>
-					<input class="form" type="text" name="nub" placeholder="enter your phone number" required="required">
+					
+					<label for="name"  class="header">phone no</label>
+				
+					<input class="form" type="text" name="phone" placeholder="enter your phone number" required="required">
 				</div>
+				
 				<div class="form-group">
-					<header class="p-head">
-					<label for="name">Business address</label>
-				</header>
-					<textarea  name="user_address" cols="20" rows="5" class="form"></textarea></td>
-				</div>
-				<div class="form-group">
-					<header class="p-head">
-					<label for="name">gender</label>
-				</header>
-					male:<input type="radio" name="user_gender" value="male" >
-				    female:<input type="radio" name="user_gender" value="female" >
+					
+					<label for="name"  class="header">gender</label>
+				
+					male:<input type="radio" name="gender" value="male" >
+				    female:<input type="radio" name="gender" value="female" >
 				</div>
 				<div class="form-group">
 					
 					<button type="register" class="button" name="register">register</button>
 				</div>
+				<h3>Already registered?<a href="login.php" class="header">login here</a></h3>
 				</form>
-		</div>
-		<?php require 'footer.html.php'; ?>
 
-	</main>
-	<?php 
-	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-		$name=$_POST['name'];
-		$email=$_POST['email'];
-		$password = $_POST['password'];
-		$state=$_POST['state'];
-		$nub=$_POST['nub'];
-		$address=$_POST['address'];
-		$gender=$_POST['gender'];
-		}
-	 ?>
+				<?php require 'views/footer.html.php'; ?>
+
+            <?php
+   require 'connection.php';
+$name = $email = $password = $state = $phone = $address = $gender = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+	$name = $_POST["name"];
+	$email = $_POST["email"];
+	$password = $_POST["password"];
+	$state = $_POST["state"];
+	$phone = $_POST["phone"];
+	$address = $_POST["address"];
+	$gender = $_POST["gender"];
+
+	if ($address == "" OR $phone == "") {
+		echo "<script> alert('fill all fields')</script>";
+		exit();
+	}
 	
-</body>
+	if (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
+		echo "<script>alert('invalid email')</script>";
+		exit();
+	}
+	if (strlen($password)<6) {
+		echo "<script>alert('password must be morethan 6characters')</script>";
+		exit();
+	}
+	$_SESSION['email'] = $email;
+	$sql = "INSERT INTO user_registrations (name,email,password,state,phone,address,gender)
+			VALUES ('{$name}', '{$email}', '{$password}', '{$state}', '{$phone}', '{$address}', '{$gender}')";
+
+			$query = $database->query($sql);
+			if ($query)
+			{
+			   
+			   echo "<script> alert('reg successfull') </script>";
+			   exit();
+			}
+		}
+	
+	  ?>
+ </body>
 </html>

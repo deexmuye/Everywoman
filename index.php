@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html>		
 <head>
 	<title>ev.php</title>
 	<link rel="stylesheet" type="text/css" href="ev.css">
+	<link rel="stylesheet" type="text/css" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
       <main>
@@ -16,46 +17,32 @@
 		          </div>
 		     </div>
 		     <div class="navbar-wrapper">
-		     	<div class="dropdown">
-				<button class="dropbtn">food</button>
-				<div class="dropdown-content">
-					<a href="/">cooking tips</a>
-					<a href="/">recipes</a>
-					<a href="/">local dishes</a>
-				</div>
-			</div>
-	             <a href="/" title="gossips">Gossips</a>
+		     	<div class="menu-bar">
+		     	<label for="toggle">&#9776;</label>
+		     	<input type="checkbox" class="toggle">
+
+		     	 <a href="/everywoman" title="Home" class="home-bar">Home</a>
+		         <a href="food.php" title="food">Food</a>
+                 <a href="/" title="gossips">Gossips</a>
 	             <a href="/" title="fashion">Fashion</a>
-	             <a href="/" title="entertaiment">Entertaiment</a>
-	             <a href="/" title="religion">Religion</a>
+	             <a href="/" title="fashion">news</a>
 	             <a href="/" title="adverts">Adverts</a>
 	             <a href="/" title="contact">Contact</a>
-	             <a href="/" title="about">About</a>
+	             <a href="/" title="islam">Islam</a>
 	             <a href="/" title="hausa">Hausa</a>
-	 	      </div>
+	             <div class="dropdown">
+	             <button class="dropbtn">Account</button>
+	             <div class="drop-content">
+	                    <a href="reg.php" title="">Create Account</a>
+	             	    <a href="login.php" title="">login here</a>
+	             	    <a href="logout.php" title="">log out</a>
+	            </div>
+	        </div>
+              </div>
+          </div>
+          </div>
 		 </header>
-		 <section class="hero">
-				<div class="section-wrapper comload">
-	              <div id="categories">
-	        	      <div class="row"></div>
-	        	     <div class="widget-content">
-	        	     	<li>
-	        			     <a><img src="img/food.jpg" width="200" height="200">
-	        			     </a>
-	        		      </li>
-	        		       <li>
-	        			       <a><img src="img/health.png" width="200" height="200">
-	        			       </a>
-	        		      </li>
-	        			   <li>
-	        			        <a><img src="img/floral.jpg" width="200" height="200">
-	        			        </a>
-	        			    </li>
-	        	        </div>
-	               </div>
-	           </div>
-	       </div>
-			</section>
+		 
 			<div class="flex-container">
 			     <section class="content">
 					<div id="content-wrapper" class="row">
@@ -132,6 +119,7 @@
 	 	  	 	                 <div class="subtitle">
 	 	  	 		                 <h2 class="sub-details">posted by admin</h2>
 	 	  	 	                  </div>
+
 	 	  	                   </div>
 	 	  	              </article>
 	 	  	           </div>
@@ -161,15 +149,22 @@
 		               <!-- end of social handle sections-->
 		               <!-- begining popular sections -->
 		               <div id="popular-section">
-		          	       <h2 class="popular">Popular</h2>
+		          	       <h2 class="popular" style="font-weight: bold; font-size: 18px;">Click To View Post Categories</h2>
 		          	      <div class="popular-post">
 		          	          <ul>
-		          	 	         <a href="/" title="how to become a millionaire"><h2 class="ps">How to become a millionaire</h2></a>
-		          	          </ul>
-		          	          <ul>
-		          		          <a href="/" title="how to become a millionaire">
-		          	              <h2 class="ps">How to become a millionaire</h2>
-		          	              </a>
+		          	 	          <select name="select category" style="width: 180px;">
+		              	<option value="">Select Category</option>
+		              	<option>select your state</option>
+						<option>adamawa</option>
+						<option>bauchi</option>
+						<option>kaduna</option>
+						<option>minna</option>
+						<option>kano</option>
+						<option>jigawa</option>
+						<option>abuja</option>
+						<option>lagos</option>
+		              	
+		              </select>
 		          	           </ul>
 		          	       </div>
 		              </div>
@@ -181,6 +176,7 @@
 		          			   <li>october</li>
 		          			   <li>november</li>
 		          		   </ul>
+
 		              </div>
 		              <div id="label">
 		          	       <h2 class="label">Label</h2>
@@ -193,6 +189,7 @@
 		          		      <a href="/" title="hausa">hausa</a>
 		          	       </ul>
 		              </div>
+		             
 		          </div>
 		      </div>
 					</aside>
@@ -215,7 +212,7 @@
 			<div class="footer-divider"></div>
 		<div class="drow">
 			<span class="sf">Copyright &copy; everywoman Blog 2019-2020. All Rights Reserved</span>
-			<span style="color: white;">coded by Deexmuye + &hearts;</span>
+			<span style="color: white;">Coded by Deexmuye + &hearts;</span>
 		</div>	
 			</footer>
 		</main>

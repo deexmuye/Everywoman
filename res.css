@@ -1,0 +1,11 @@
+.cardlinks a{
+	opacity: 2;	
+
+}
+a:hover{
+	color: red;
+}
+h4{
+
+	text-transform: initial;
+}

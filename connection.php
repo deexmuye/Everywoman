@@ -9,8 +9,6 @@
 	{
 		die($ex);
 	}
-if($database){
-	echo "connected";
-}
+
 
 ?>
